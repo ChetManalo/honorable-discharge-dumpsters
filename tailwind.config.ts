@@ -9,9 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#36436F",
+        highlight: "#B6000F",
+        highlightDarken: "#a3000d",
+        offWhite: "#F4F4F4",
+        offBlack: "#24282B",
+        link: "#A7D0D6"
       },
+      screens: {
+        'lg': '980px',
+      }
     },
   },
   plugins: [],
