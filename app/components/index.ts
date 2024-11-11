@@ -5,6 +5,7 @@ import Card from "./Card";
 import Button from "./Button";
 import ContactForm from "./ContactForm";
 import GoogleCaptchaWrapper from "./GoogleCaptchaWrapper";
+import LargeCard from "./LargeCard";
 
 export {
   Header,
@@ -13,5 +14,6 @@ export {
   Card,
   Button,
   ContactForm,
-  GoogleCaptchaWrapper
+  GoogleCaptchaWrapper,
+  LargeCard
 }

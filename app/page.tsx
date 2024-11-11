@@ -10,7 +10,7 @@ export default function Home() {
         <Button size={2} link="/rent-a-dumpster">Rent a Dumpster</Button>
       </section>
       <section className="text-offWhite bg-background">
-        <div className="max-w-[1700px] mx-auto flex flex-col items-center xl:flex-row gap-4 xl:gap-8 px-4 py-14">
+        <div className="max-w-[1700px] mx-auto flex flex-col items-center xl:flex-row gap-4 xl:gap-8 px-4 pb-14 pt-6">
           <div>
             <h2 className="font-bold text-4xl md:text-5xl mb-2 md:mb-6 text-left">Who are we?</h2>
             <p className="leading-loose max-w-4xl md:text-2xl md:leading-loose">Welcome to Honorable Discharge Dumpsters and Hauling Services, where we proudly bring the values of discipline, integrity, and commitment into the world of hauling and transportation. We specialize in residential and commercial hauling, providing efficient, professional, and punctual services. Your satisfaction is our unwavering commitment, and we eagerly anticipate the opportunity to serve you.</p>
