@@ -1,49 +1,61 @@
 "use client";
+
 import { FormEvent, useState } from "react";
 import axios from "axios";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { useRouter } from "next/navigation";
 
 export default function ContactForm() {
   const [name, setName] = useState<string | null>(null);
   const [email, setEmail] = useState<string | null>(null);
   const [subject, setSubject] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
-
-  type formData = {
-    name: string,
-    email: string,
-    subject: string,
-    message: string
-  }
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const { executeRecaptcha } = useGoogleReCaptcha();
+  const router = useRouter();
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    if (!executeRecaptcha) {
-      console.log('Recaptcha not available to execute.');
-      return;
-    }
-
-    const gRecaptchaToken = await executeRecaptcha('inquirySubmit');
-
-    const res = await axios.post(
-      '/api/recaptchaSubmit',
-      { gRecaptchaToken },
-      {
-        headers: {
-          Accept: "application/json, text/plain, */*",
-          "Content-Type": "application/json",
-        }
+    try {
+      if (!executeRecaptcha) {
+        console.log('Recaptcha not available to execute.');
+        throw new Error("Recaptcha error");
       }
-    );
+  
+      const gRecaptchaToken = await executeRecaptcha('inquirySubmit');
+  
+      const res = await axios.post(
+        '/api/recaptchaSubmit',
+        { gRecaptchaToken },
+        {
+          headers: {
+            Accept: "application/json, text/plain, */*",
+            "Content-Type": "application/json",
+          }
+        }
+      );
+  
+      if (res?.data?.success === true) {
+        await axios.post(
+          '/api/inquirySubmit',
+          { name, email, subject, message },
+          {
+            headers: {
+              Accept: "application/json, text/plain, */*",
+              "Content-Type": "application/json",
+            }
+          }
+        )
 
-    if (res?.data?.success === true) {
-      console.log("SUCCESS! Score: " + res?.data?.score);
-      console.log(name, email, subject, message);
-    } else {
-      console.log("FAILED! Score: " + res?.data?.score);
+        router.push("/contact/thank-you");
+      } else {
+        setErrorMessage("Captcha failed!");
+      }
+    } catch (err) {
+      console.log(err);
+      setErrorMessage("An error has occurred! Message not sent!");
     }
   }
 
@@ -65,7 +77,7 @@ export default function ContactForm() {
       <textarea onChange={(e) => setMessage(e.target.value)} className="p-2 w-full text-offBlack text-lg border" rows={5} name="message" id="message" required></textarea>
       <div className="flex justify-between mt-4">
         <p className="text-highlight">
-          {/* Form Error Messages */}
+          {errorMessage}
         </p>
         <button className='bg-highlight hover:bg-highlightDarken text-offWhite px-8 py-3 rounded font-semibold'>Submit</button>
       </div>

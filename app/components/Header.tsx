@@ -8,7 +8,9 @@ export default function Header() {
     <header className="bg-background text-offWhite hidden md:block">
       <div className="flex justify-between items-center px-8 py-6">
         <div className="flex items-center gap-4">
-          <Image width="112" height="112" src="/images/logo.png" alt="Honorable Discharge Dumpsters logo" />
+          <Link href="/">
+            <Image width="112" height="112" src="/images/logo.png" alt="Honorable Discharge Dumpsters logo" />
+          </Link>
           <div>
             <h1 className="text-4xl font-bold">Honorable Discharge Dumpsters</h1>
             <p className="text-lg mt-1.5">Fully Insured | Servicing Citrus, Hernando, Pasco, Pinellas, and Hillsborough county</p>
