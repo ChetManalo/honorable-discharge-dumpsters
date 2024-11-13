@@ -27,8 +27,16 @@ export async function POST(req: Request, res: Response) {
   const { name, email, subject, message }: Inquiry = data;
 
   const cleanName = validator.escape(name);
-  const cleanEmail = validator.normalizeEmail(email);
   const cleanMessage = validator.escape(message);
+
+  if (!validator.isEmail(email)) {
+    return NextResponse.json({
+      success: false,
+      message: "Invalid email address"
+    })
+  }
+
+  const cleanEmail = validator.normalizeEmail(email);
 
   try {
     await transporter.sendMail({
@@ -39,11 +47,13 @@ export async function POST(req: Request, res: Response) {
     });
 
     return NextResponse.json({
-      success: true
+      success: true,
     });
   } catch (err) {
+    console.log(err);
     return NextResponse.json({
-      success: false
+      success: false,
+      message: "An error has occured while sending your message. Try Again."
     })
   }
 }
