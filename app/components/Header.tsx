@@ -34,9 +34,6 @@ export default function Header() {
               <Link className="block py-4 pl-3 w-full hover:bg-highlightDarken" href="/services/landscaping">Landscaping</Link>
             </li>
             <li>
-              <Link className="block py-4 pl-3 w-full hover:bg-highlightDarken" href="/services/under-brushing">Under-brushing</Link>
-            </li>
-            <li>
               <Link className="block py-4 pl-3 w-full hover:bg-highlightDarken" href="/services/debris-removal">Debris removal</Link>
             </li>
             <li>

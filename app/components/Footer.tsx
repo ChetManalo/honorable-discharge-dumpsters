@@ -20,9 +20,6 @@ export default function Footer() {
               <Link href="/landscaping">Landscaping</Link>
             </li>
             <li>
-              <Link href="/under-brushing">Under-brushing</Link>
-            </li>
-            <li>
               <Link href="/debris-removal">Debris Removal</Link>
             </li>
             <li>

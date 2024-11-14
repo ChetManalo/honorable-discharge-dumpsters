@@ -51,9 +51,6 @@ export default function MobileHeader() {
                   <Link onClick={() => { setToggleNav(!toggleNav) }} href="/services/landscaping">Landscaping</Link>
                 </li>
                 <li>
-                  <Link onClick={() => { setToggleNav(!toggleNav) }} href="/services/under-brushing">Under-brushing</Link>
-                </li>
-                <li>
                   <Link onClick={() => { setToggleNav(!toggleNav) }} href="/services/debris-removal">Debris removal</Link>
                 </li>
                 <li>
