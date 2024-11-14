@@ -25,7 +25,7 @@ export default function Header() {
       <nav className="flex justify-center bg-highlight text-xl font-semibold">
         <Link className="py-4 px-10 hover:bg-highlightDarken" href="/">Home</Link>
         <div className="relative group py-4 px-10 cursor-default hover:bg-highlightDarken">
-          <span>Services⏷</span>
+          <span>Services<span className="text-xs ml-1 -translate-y-0.5 inline-block">&#9660;</span></span>
           <ul className="absolute z-40 left-0 top-full w-full bg-highlight whitespace-nowrap hidden group-hover:flex flex-col">
             <li>
               <Link className="block py-4 pl-3 w-full hover:bg-highlightDarken" href="/services/mowing">Mowing</Link>

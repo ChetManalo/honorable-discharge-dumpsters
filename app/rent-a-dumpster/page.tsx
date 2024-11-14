@@ -51,7 +51,7 @@ export default function page() {
     yards: "15",
     price: "400",
     image: {
-      path: "/images/15Yard.jpg",
+      path: "/images/15yard.jpg",
       alt: "15 yard dumpster"
     },
     desc: "Popular choice for moderate-sized projects, including larger home cleanouts, small remodels, and yard overhauls.",
