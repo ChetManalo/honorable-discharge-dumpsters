@@ -83,9 +83,9 @@ export default function ContactForm() {
           <input onChange={(e) => setEmail(e.target.value)} className="p-2 w-full text-offBlack text-lg border outline-background" type="email" name="email" id="email" autoComplete="off" required />
         </div>
       </div>
-      <label className="block mb-1 font-semibold mt-2 text-lg" htmlFor="subject">Subject - <span className="text-sm">Service, dumpster, etc.</span></label>
+      <label className="block mb-1 font-semibold mt-2 text-lg" htmlFor="subject">Subject - <span className="text-sm font-normal">Service, dumpster, etc.</span></label>
       <input onChange={(e) => setSubject(e.target.value)} className="p-2 w-full text-offBlack text-lg border outline-background" type="text" name="subject" id="subject" autoComplete="off" required />
-      <label className="block mb-1 font-semibold mt-2 text-lg" htmlFor="message">Message - <span className="text-sm">A description of your problem or a question.</span></label>
+      <label className="block mb-1 font-semibold mt-2 text-lg" htmlFor="message">Message - <span className="text-sm font-normal">A description of your problem or a question.</span></label>
       <textarea onChange={(e) => setMessage(e.target.value)} className="p-2 w-full text-offBlack text-lg border outline-background" maxLength={500} rows={5} name="message" id="message" required></textarea>
       <div className="flex justify-end items-center gap-4 mt-4">
         <p className="text-highlight" role="alert" aria-live="assertive">

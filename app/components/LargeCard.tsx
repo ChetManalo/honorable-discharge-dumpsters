@@ -21,7 +21,7 @@ export default function LargeCard({dumpster}: Dumpster) {
 
   return (
     <section className="flex flex-col md:flex-row md:gap-4 items-center p-4 md:p-8 rounded-md bg-white max-w-6xl">
-      <Image className="rounded-md" src={path} height={300} width={400} alt={alt} />
+      <Image className="rounded-md min-h-[300px]" src={path} height={300} width={400} alt={alt} />
       <div>
         <div className="text-center my-4 md:text-left">
           <h3 className="font-semibold text-3xl">{yards} Yard Dumpster</h3>
@@ -34,7 +34,7 @@ export default function LargeCard({dumpster}: Dumpster) {
           })}
         </ul>
         <div className="text-center md:text-right py-4">
-          <Button size={2} link="#">Rent Now</Button>
+          <Button size={2} link="/rent-a-dumpster/book">Rent Now</Button>
         </div>
       </div>
     </section>

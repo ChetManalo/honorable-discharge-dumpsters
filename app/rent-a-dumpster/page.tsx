@@ -33,7 +33,7 @@ export default function page() {
 
   const fourteen: Dumpster = {
     yards: "14",
-    price: "350",
+    price: "380",
     image: {
       path: "/images/14Yard.jpg",
       alt: "14 yard dumpster"

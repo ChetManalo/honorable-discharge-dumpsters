@@ -23,7 +23,7 @@ export default function Home() {
         <p className="md:text-lg">For more information on our dumpsters, head to the <Link className="text-background underline" href="rent-a-dumpster">Rent a Dumpster</Link> page.</p>
         <div className="flex flex-col md:flex-row md:justify-center items-center gap-4 mt-6">
           <Card yards={10.5} price={300} image="/images/10HalfYard.jpg" />
-          <Card yards={14} price={350} image="/images/14Yard.jpg" />
+          <Card yards={14} price={380} image="/images/14Yard.jpg" />
           <Card yards={15} price={400} image="/images/15yard.jpg" />
         </div>
       </section>
