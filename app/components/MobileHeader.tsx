@@ -5,8 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function MobileHeader() {
-  const [toggleNav, setToggleNav] = useState<Boolean>(false);
-  const [toggleServices, setToggleServices] = useState<Boolean>(false);
+  const [toggleNav, setToggleNav] = useState<boolean>(false);
+  const [toggleServices, setToggleServices] = useState<boolean>(false);
 
   useEffect(() => {
     if (toggleNav) {

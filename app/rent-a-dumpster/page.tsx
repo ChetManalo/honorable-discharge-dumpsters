@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { LargeCard } from "../components";
 
 type DumpsterImage = {

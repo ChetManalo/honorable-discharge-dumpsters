@@ -2,8 +2,7 @@
 
 import { NextResponse } from "next/server";
 import validator from 'validator';
-
-const nodemailer = require("nodemailer");
+import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport({
   host: "smtp.mailersend.net",
@@ -22,7 +21,7 @@ type Inquiry = {
   message: string
 }
 
-export async function POST(req: Request, res: Response) {
+export async function POST(req: Request) {
   const data = await req.json();
   const { name, email, subject, message }: Inquiry = data;
 
