@@ -34,7 +34,7 @@ export default function LargeCard({dumpster}: Dumpster) {
           })}
         </ul>
         <div className="text-center md:text-right py-4">
-          <Button size={2} link="/rent-a-dumpster/book">Rent Now</Button>
+          <Button size={2} link="/rent-a-dumpster/book">Book Now</Button>
         </div>
       </div>
     </section>
