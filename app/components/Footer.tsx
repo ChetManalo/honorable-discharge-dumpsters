@@ -15,25 +15,25 @@ export default function Footer() {
                 <Link href="/">Home</Link>
               </li>
               <li>
-                <Link href="/mowing">Mowing</Link>
+                <Link href="/services/mowing">Mowing</Link>
               </li>
               <li>
-                <Link href="/landscaping">Landscaping</Link>
+                <Link href="/services/landscaping">Landscaping</Link>
               </li>
               <li>
-                <Link href="/debris-removal">Debris Removal</Link>
+                <Link href="/services/debris-removal">Debris Removal</Link>
               </li>
               <li>
-                <Link href="/storm-cleanup">Storm Cleanup</Link>
+                <Link href="/services/storm-cleanup">Storm Cleanup</Link>
               </li>
               <li>
-                <Link href="/junk-removal">Junk Removal</Link>
+                <Link href="/services/junk-removal">Junk Removal</Link>
               </li>
               <li>
-                <Link href="/rent-a-dumpster">Rent a dumpster</Link>
+                <Link href="/services/rent-a-dumpster">Rent a dumpster</Link>
               </li>
               <li>
-                <Link href="/contact">Contact us</Link>
+                <Link href="/services/contact">Contact us</Link>
               </li>
             </ul>
           </nav>
