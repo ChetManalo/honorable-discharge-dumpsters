@@ -30,10 +30,10 @@ export default function Footer() {
                 <Link href="/services/junk-removal">Junk Removal</Link>
               </li>
               <li>
-                <Link href="/services/rent-a-dumpster">Rent a dumpster</Link>
+                <Link href="/rent-a-dumpster">Rent a dumpster</Link>
               </li>
               <li>
-                <Link href="/services/contact">Contact us</Link>
+                <Link href="/contact">Contact us</Link>
               </li>
             </ul>
           </nav>
