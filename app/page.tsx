@@ -9,13 +9,13 @@ export default function Home() {
         <h2 className="text-2xl md:text-7xl font-bold text-right mb-4">Residential & Commercial<br/>Dumpster Rental</h2>
         <Button size={2} link="/rent-a-dumpster">Rent a Dumpster</Button>
       </section>
-      <section className="text-offWhite bg-background">
-        <div className="max-w-[1700px] mx-auto flex flex-col items-center xl:flex-row gap-4 xl:gap-8 px-4 py-8">
+      <section className="text-offWhite bg-blueGradient py-14">
+        <div className="max-w-[1700px] mx-auto flex flex-col items-center xl:flex-row xl:justify-center gap-4 xl:gap-8 px-4 py-8">
           <div>
             <h2 className="font-bold text-4xl md:text-5xl mb-2 md:mb-6 text-left">Who are we?</h2>
             <p className="leading-loose max-w-4xl md:text-2xl md:leading-loose">Welcome to Honorable Discharge Dumpsters and Hauling Services, where we proudly bring the values of discipline, integrity, and commitment into the world of hauling and transportation. We specialize in residential and commercial hauling, providing efficient, professional, and punctual services. Your satisfaction is our unwavering commitment, and we eagerly anticipate the opportunity to serve you.</p>
           </div>
-          <Image className="mx-auto max-h-[400px] shadow-md" src="/images/dumpster.png" width={780} height={561} alt="A dumpster being unloaded off a trailer" />
+          <Image className="max-h-[400px] max-w-lg shadow-md rounded" src="/images/dumpsters.webp" width={1000} height={566} alt="Four dumpsters lined up next to each other" />
         </div>
       </section>
       <section className="text-center py-14 px-4">
@@ -27,7 +27,7 @@ export default function Home() {
           <Card yards={15} price={400} desc="Popular choice for moderate-sized projects, including larger home cleanouts, small remodels, and yard overhauls." image="/images/15yard.jpg" />
         </div>
       </section>
-      <section className="text-center bg-background text-offWhite py-8">
+      <section className="text-center bg-blueGradient text-offWhite py-8">
         <h2 className="font-bold text-3xl mb-2 md:text-5xl">Email Us</h2>
         <p className="md:text-lg">Use this form to email us or call/text us at <br /><a className="text-link underline" href="tel:3525297664">(352) 549-7664</a></p>
         <ContactForm />

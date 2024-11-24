@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 import axios from "axios";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { useRouter } from "next/navigation";
@@ -12,6 +12,7 @@ export default function ContactForm() {
   const [message, setMessage] = useState<string>("");
   const [errorMessage, setErrorMessage] = useState<string>("");
   const [isSending, setIsSending] = useState<boolean>(false);
+  const [file, setFile] = useState<File>();
 
   const { executeRecaptcha } = useGoogleReCaptcha();
   const router = useRouter();
@@ -40,22 +41,37 @@ export default function ContactForm() {
       );
   
       if (res?.data?.success) {
-        const emailRes = await axios.post(
-          '/api/inquirySubmit',
-          { name, email, subject, message },
-          {
-            headers: {
-              Accept: "application/json, text/plain, */*",
-              "Content-Type": "application/json",
-            }
-          }
-        )
 
-        if (!emailRes.data.success) {
-          throw new Error(emailRes.data.message);
+        const data = new FormData();
+        data.append("name", name);
+        data.append("email", email);
+        data.append("subject", subject);
+        data.append("message", message);
+
+        if (file) {
+          const validImageTypes = ["image/jpg", "image/jpeg", "image/png", "image/jfif", "image/pjpeg", "image/pjp"];
+          if (!validImageTypes.includes(file.type)) {
+            throw new Error("Invalid image type. Must be jpg, jpeg, or png.");
+          }
+          data.append("file", file);
         }
 
-        router.push("/contact/thank-you");
+        const emailRes = await fetch("/api/inquirySubmit", {
+          method: 'POST',
+          body: data
+        })
+
+        if (!emailRes.ok) {
+          throw new Error("An error has occured while sending your message. Try Again.");
+        }
+
+        const result = await emailRes.json();
+
+        if (!result.success) {
+          throw new Error(result.message);
+        } else {
+          router.push("/contact/thank-you");
+        }
       } else {
         setErrorMessage("Captcha failed!");
       }
@@ -87,6 +103,8 @@ export default function ContactForm() {
       <input onChange={(e) => setSubject(e.target.value)} className="p-2 w-full text-offBlack text-lg border outline-background" type="text" name="subject" id="subject" autoComplete="off" required />
       <label className="block mb-1 font-semibold mt-2 text-lg" htmlFor="message">Message - <span className="text-sm font-normal">A description of your problem or a question.</span></label>
       <textarea onChange={(e) => setMessage(e.target.value)} className="p-2 w-full text-offBlack text-lg border outline-background" maxLength={500} rows={5} name="message" id="message" required></textarea>
+      <label htmlFor="image">Upload Image: </label>
+      <input type="file" name="image" id="image" onChange={(e) => setFile(e.target.files?.[0])} accept="image/png, image/jpeg" />
       <div className="flex justify-end items-center gap-4 mt-4">
         <p className="text-highlight" role="alert" aria-live="assertive">
           {errorMessage}

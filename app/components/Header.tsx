@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="bg-background text-offWhite hidden md:block">
+    <header className="bg-blueGradient text-offWhite hidden md:block">
       <div className="flex justify-between items-center px-8 py-6">
         <div className="flex items-center gap-4">
           <Link href="/">
@@ -22,7 +22,7 @@ export default function Header() {
           <a className="text-link underline" href="tel:3525297664">(352) 549-7664</a>
         </div>
       </div>
-      <nav className="flex justify-center bg-highlight text-xl font-semibold">
+      <nav className="flex justify-center bg-redGradient text-xl font-semibold">
         <Link className="py-4 px-10 hover:bg-highlightDarken" href="/">Home</Link>
         <div className="relative group py-4 px-10 cursor-default hover:bg-highlightDarken">
           <span>Services<span className="text-xs ml-1 -translate-y-0.5 inline-block">&#9660;</span></span>

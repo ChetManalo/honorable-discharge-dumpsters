@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'blueGradient': 'linear-gradient(to bottom, #003366, #002d5b)',
+        'redGradient': 'linear-gradient(to bottom, #B6000F, #a3000d)'
+      },
       colors: {
         background: "#36436F",
         highlight: "#B6000F",
