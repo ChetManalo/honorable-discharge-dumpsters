@@ -10,7 +10,10 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'blueGradient': 'linear-gradient(to bottom, #003366, #002d5b)',
-        'redGradient': 'linear-gradient(to bottom, #B6000F, #a3000d)'
+        'redGradient': 'linear-gradient(to bottom, #B6000F, #a3000d)',
+        'redGradientReverse': 'linear-gradient(to bottom, #a3000d, #B6000F)',
+        'darkGradient': 'linear-gradient(to bottom, #24282b, #202426)',
+        'darkGradientReverse': 'linear-gradient(to bottom, #202426, #24282b)',
       },
       colors: {
         background: "#36436F",
@@ -22,6 +25,9 @@ const config: Config = {
       },
       screens: {
         'lg': '980px',
+      },
+      fontFamily: {
+        header: ['var(--font-oswald)']
       }
     },
   },

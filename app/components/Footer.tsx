@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="text-offWhite bg-offBlack py-16 md:pt-12 px-16">
+    <footer className="text-offWhite bg-darkGradient py-16 md:pt-12 px-16">
       <div className="flex flex-col md:flex-row gap-8 md:gap-0 justify-between items-center">
         <div className="">
           <Image src="/images/logo.png" height={200} width={200} alt="Honorable Discharge Dumpsters logo" />

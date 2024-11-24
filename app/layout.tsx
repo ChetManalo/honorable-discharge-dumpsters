@@ -1,11 +1,16 @@
 import "./globals.css";
 import { Metadata } from "next";
-import { Roboto } from 'next/font/google';
+import { Roboto, Oswald } from 'next/font/google';
 import { Header, MobileHeader, Footer, GoogleCaptchaWrapper } from "./components";
 
 const roboto = Roboto({
   weight: '400',
   subsets: ['latin'],
+})
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  variable: '--font-oswald',
 })
 
 export const metadata: Metadata = {
@@ -20,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={`${roboto.className} ${oswald.variable}`}>
         <MobileHeader />
         <Header />
         <GoogleCaptchaWrapper>

@@ -92,19 +92,21 @@ export default function ContactForm() {
       <div className="flex gap-2">
         <div className="flex-grow">
           <label className="block mb-1 font-semibold text-lg" htmlFor="name">Name</label>
-          <input onChange={(e) => setName(e.target.value)} className="p-2 w-full text-offBlack text-lg border outline-background" type="text" name="name" id="name" autoComplete="off" required />
+          <input onChange={(e) => setName(e.target.value)} className="p-2 w-full text-offBlack text-lg border outline-background shadow-inner" type="text" name="name" id="name" autoComplete="off" required />
         </div>
         <div className="flex-grow">
           <label className="block mb-1 font-semibold text-lg" htmlFor="email">Email</label>
-          <input onChange={(e) => setEmail(e.target.value)} className="p-2 w-full text-offBlack text-lg border outline-background" type="email" name="email" id="email" autoComplete="off" required />
+          <input onChange={(e) => setEmail(e.target.value)} className="p-2 w-full text-offBlack text-lg border outline-background shadow-inner" type="email" name="email" id="email" autoComplete="off" required />
         </div>
       </div>
       <label className="block mb-1 font-semibold mt-2 text-lg" htmlFor="subject">Subject - <span className="text-sm font-normal">Service, dumpster, etc.</span></label>
-      <input onChange={(e) => setSubject(e.target.value)} className="p-2 w-full text-offBlack text-lg border outline-background" type="text" name="subject" id="subject" autoComplete="off" required />
+      <input onChange={(e) => setSubject(e.target.value)} className="p-2 w-full text-offBlack text-lg border outline-background shadow-inner" type="text" name="subject" id="subject" autoComplete="off" required />
       <label className="block mb-1 font-semibold mt-2 text-lg" htmlFor="message">Message - <span className="text-sm font-normal">A description of your problem or a question.</span></label>
-      <textarea onChange={(e) => setMessage(e.target.value)} className="p-2 w-full text-offBlack text-lg border outline-background" maxLength={500} rows={5} name="message" id="message" required></textarea>
-      <label htmlFor="image">Upload Image: </label>
-      <input type="file" name="image" id="image" onChange={(e) => setFile(e.target.files?.[0])} accept="image/png, image/jpeg" />
+      <textarea onChange={(e) => setMessage(e.target.value)} className="p-2 w-full text-offBlack text-lg border outline-background shadow-inner" maxLength={500} rows={5} name="message" id="message" required></textarea>
+      <div className="my-2">
+        <label htmlFor="image">Upload Image: </label>
+        <input type="file" name="image" id="image" onChange={(e) => setFile(e.target.files?.[0])} accept="image/png, image/jpeg" />
+      </div>
       <div className="flex justify-end items-center gap-4 mt-4">
         <p className="text-highlight" role="alert" aria-live="assertive">
           {errorMessage}

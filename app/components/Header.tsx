@@ -12,7 +12,7 @@ export default function Header() {
             <Image width="112" height="112" src="/images/logo.png" alt="Honorable Discharge Dumpsters logo" />
           </Link>
           <div>
-            <h1 className="text-4xl font-bold">Honorable Discharge Dumpsters</h1>
+            <h1 className="text-4xl font-bold font-header">Honorable Discharge Dumpsters</h1>
             <p className="text-lg mt-1.5">Fully Insured | Servicing Citrus, Hernando, Pasco, Pinellas, and Hillsborough county</p>
             <p className="mt-1 text-lg block lg:hidden font-semibold">Call or Text us: <a className="text-link underline" href="tel:3525297664">(352) 549-7664</a></p>
           </div>
@@ -22,7 +22,7 @@ export default function Header() {
           <a className="text-link underline" href="tel:3525297664">(352) 549-7664</a>
         </div>
       </div>
-      <nav className="flex justify-center bg-redGradient text-xl font-semibold">
+      <nav className="flex justify-center bg-redGradient text-xl font-header font-semibold">
         <Link className="py-4 px-10 hover:bg-highlightDarken" href="/">Home</Link>
         <div className="relative group py-4 px-10 cursor-default hover:bg-highlightDarken">
           <span>Services<span className="text-xs ml-1 -translate-y-0.5 inline-block">&#9660;</span></span>

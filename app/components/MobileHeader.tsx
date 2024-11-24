@@ -18,7 +18,7 @@ export default function MobileHeader() {
 
   return (
     <header className="sticky top-0 z-50 text-offWhite md:hidden">
-      <div className="flex justify-between p-4 relative z-40 bg-offBlack">
+      <div className="flex justify-between p-4 relative z-40 bg-darkGradient">
         <Link href="/">
         <Image 
           src="/images/logo.png"
@@ -35,8 +35,8 @@ export default function MobileHeader() {
           onClick={() => { setToggleNav(!toggleNav) }}
         />
       </div>
-      <div className={`flex flex-col justify-between absolute z-30 bg-offBlack top-0 pt-[100px] pb-24 w-full overflow-hidden h-screen ${toggleNav ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'} transition-all`}>
-        <nav className="text-2xl pt-4">
+      <div className={`flex flex-col justify-between absolute z-30 bg-darkGradientReverse top-0 pt-[100px] pb-24 w-full overflow-hidden h-screen ${toggleNav ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'} transition-all`}>
+        <nav className="text-2xl pt-4 font-header">
           <ul className="flex flex-col gap-4 text-center">
             <li>
               <Link onClick={() => { setToggleNav(!toggleNav) }} href="/">Home</Link>

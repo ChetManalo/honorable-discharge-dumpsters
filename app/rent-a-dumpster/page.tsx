@@ -64,11 +64,11 @@ export default function page() {
 
   return (
     <main>
-      <section className="bg-[url('/images/heroDarker.webp')] bg-cover h-48 md:h-96 flex justify-center items-center">
-        <h1 className="text-offWhite font-bold text-5xl text-center sm:text-7xl">Rent a Dumpster</h1>
+      <section className="bg-[url('/images/hero.webp')] bg-cover h-48 md:h-96 flex justify-center items-center">
+        <h1 className="text-offWhite font-header font-bold text-5xl text-center sm:text-7xl">Rent a Dumpster</h1>
       </section>
-      <section className="flex flex-col items-center gap-4 p-4 py-8">
-        <h2 className="text-center font-semibold text-4xl">Our Dumpsters</h2>
+      <section className="flex flex-col items-center gap-4 md:gap-6 p-4 py-8">
+        <h2 className="text-center font-header font-semibold text-5xl mb-4 md:text-6xl">Our Dumpsters</h2>
         <LargeCard dumpster={tenHalf} />
         <LargeCard dumpster={fourteen} />
         <LargeCard dumpster={fifteen} />
