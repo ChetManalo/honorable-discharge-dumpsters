@@ -33,7 +33,7 @@ const service: Service = {
       alt: "Dumpster being filled with branches and logs"
     },
   ],
-  header: "cleanupHeader.webp"
+  header: "cleanupHeader"
 }
 
 export default function page() {

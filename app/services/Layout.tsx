@@ -17,7 +17,7 @@ export default function Layout({name, desc, images, header}: Service) {
   return (
     <main>
       <section className="relative w-full h-48 md:h-96 flex justify-center items-center shadow-md">
-        <Image src={`/images/services/${header}`} className="h-full w-full" width={1920} height={500} alt=""/>
+        <Image src={`/images/services/${header}.webp`} placeholder="blur" blurDataURL={`/images/services/${header}Blur.webp`} className="h-full w-full" width={1920} height={500} alt=""/>
         <h1 className="absolute text-offWhite font-header font-bold text-5xl text-center sm:text-7xl">{name}</h1>
       </section>
       <section className="px-4 py-12 max-w-4xl mx-auto">

@@ -25,7 +25,7 @@ const service: Service = {
       alt: "Dumpster being filled with branches and logs"
     },
   ],
-  header: "junkRemovalHeader.webp"
+  header: "junkRemovalHeader"
 }
 
 export default function page() {

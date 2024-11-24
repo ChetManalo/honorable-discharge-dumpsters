@@ -5,9 +5,12 @@ import { Card, Button, ContactForm } from "./components";
 export default function Home() {
   return (
     <main>
-      <section className="flex flex-col items-center justify-center gap-6 md:gap-12 p-6 md:p-12 text-offWhite bg-[url('/images/hero.webp')] bg-no-repeat bg-cover w-full max-h-[500px] aspect-video">
-        <h2 className="font-header text-5xl md:text-8xl font-bold text-balance text-center max-w-5xl">Residential & Commercial Dumpster Rental</h2>
-        <Button size={2} link="/rent-a-dumpster">Rent a Dumpster Now</Button>
+      <section className="relative w-full max-h-[500px] aspect-video">
+        <Image className="w-full h-full object-cover" src="/images/hero.webp" width={2046} height={800} alt="Three dumpsters lined up next to each other." placeholder="blur" blurDataURL="/images/heroBlur.webp" />
+        <div className="absolute flex flex-col items-center gap-6 md:gap-12 text-offWhite top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
+          <h2 className="font-header text-3xl md:text-8xl font-bold text-balance text-center max-w-5xl">Residential & Commercial Dumpster Rental</h2>
+          <Button size={2} link="/rent-a-dumpster">Rent a Dumpster Now</Button>
+        </div>
       </section>
       <section className="text-offBlack py-4 md:py-14">
         <div className="max-w-[1700px] mx-auto flex flex-col items-center xl:flex-row xl:justify-center gap-4 xl:gap-8 px-4 py-8">

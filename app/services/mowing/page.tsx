@@ -25,7 +25,7 @@ const service: Service = {
       alt: "Dumpster being filled with branches and logs"
     },
   ],
-  header: "mowingHeader.webp"
+  header: "mowingHeader"
 }
 
 export default function page() {
