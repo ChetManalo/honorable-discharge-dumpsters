@@ -71,7 +71,7 @@ export default function MobileHeader() {
         </nav>
         <div className="text-center flex flex-col gap-3 pb-4">
           <p>Fully Insured | Servicing Citrus, Hernando, Pasco, Pinellas, and Hillsborough county</p>
-          <p className="text-lg font-semibold">Call or Text us: <a className="text-link underline" href="tel:3525297664">(352) 549-7664</a></p>
+          <p className="text-lg font-semibold">Call or Text us: <a className="text-link underline" href="tel:7272406256">(727) 240-6256</a></p>
         </div>
       </div>
     </header>

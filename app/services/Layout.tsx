@@ -34,7 +34,7 @@ export default function Layout({name, desc, images, header}: Service) {
       </section>
       <section className="py-8">
         <h2 className="text-5xl md:text-6xl font-header font-semibold text-center pb-4">Get a FREE quote on this service</h2>
-        <p className="text-center text-lg">Use the form below or call/text us at<br/><a className="text-background underline text-xl" href="tel:3525297664">(352) 549-7664</a></p>
+        <p className="text-center text-lg">Use the form below or call/text us at<br/><a className="text-background underline text-xl" href="tel:7272406256">(727) 240-6256</a></p>
         <ContactForm />
       </section>
     </main>

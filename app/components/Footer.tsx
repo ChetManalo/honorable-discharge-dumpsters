@@ -39,7 +39,7 @@ export default function Footer() {
           </nav>
         </div>
         <div className="text-center w-[200px]">
-          <p className="text-lg font-semibold">Call/Text us:<br /><a className="text-link underline" href="tel:3525297664">(352) 549-7664</a></p>
+          <p className="text-lg font-semibold">Call/Text us:<br /><a className="text-link underline" href="tel:7272406256">(727) 240-6256</a></p>
           <div className="flex justify-center gap-3 mt-2">
               <a target="_blank" href="https://www.facebook.com/people/Honorable-Discharge-Dumpsters-Hauling-Services/61563285702063/">
                 <Image 

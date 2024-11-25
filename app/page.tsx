@@ -32,7 +32,7 @@ export default function Home() {
       </section>
       <section className="text-center text-offBlack py-8">
         <h2 className="font-header font-bold text-5xl mb-4 md:text-6xl">Contact Us</h2>
-        <p className="text-lg">Use this form to email us or call/text us at <br /><a className="text-background underline text-xl" href="tel:3525297664">(352) 549-7664</a></p>
+        <p className="text-lg">Use this form to email us or call/text us at <br /><a className="text-background underline text-xl" href="tel:7272406256">(727) 240-6256</a></p>
         <ContactForm />
       </section>
     </main>

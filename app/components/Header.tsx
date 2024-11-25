@@ -14,7 +14,7 @@ export default function Header() {
           <div>
             <h1 className="text-4xl font-bold font-header">Honorable Discharge Dumpsters</h1>
             <p className="text-lg mt-1.5">Fully Insured | Servicing Citrus, Hernando, Pasco, Pinellas, and Hillsborough county</p>
-            <p className="mt-1 text-lg block lg:hidden font-semibold">Call or Text us: <a className="text-link underline" href="tel:3525297664">(352) 549-7664</a></p>
+            <p className="mt-1 text-lg block lg:hidden font-semibold">Call or Text us: <a className="text-link underline" href="tel:7272406256">(727) 240-6256</a></p>
           </div>
         </div>
         <div className="text-center text-xl hidden lg:block">
