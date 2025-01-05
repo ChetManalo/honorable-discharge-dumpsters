@@ -25,8 +25,8 @@ export default function Home() {
         <h2 className="font-header font-bold text-5xl md:text-6xl mb-8">Our Dumpsters</h2>
         <div className="flex flex-col md:flex-row md:justify-center items-center gap-4 mt-6">
           <Card yards={10.5} price={300} desc="Perfect for small to mid-sized projects, such as home cleanouts, minor remodeling, or yard waste removal." image="/images/10HalfYard.jpg" />
-          <Card yards={14} price={380} desc="Ideal for medium-sized projects like extensive home cleanouts, bathroom or kitchen renovations, and large landscaping jobs." image="/images/14Yard.jpg" />
-          <Card yards={15} price={400} desc="Popular choice for moderate-sized projects, including larger home cleanouts, small remodels, and yard overhauls." image="/images/15yard.jpg" />
+          {/* <Card yards={14} price={380} desc="Ideal for medium-sized projects like extensive home cleanouts, bathroom or kitchen renovations, and large landscaping jobs." image="/images/14Yard.jpg" />
+          <Card yards={15} price={400} desc="Popular choice for moderate-sized projects, including larger home cleanouts, small remodels, and yard overhauls." image="/images/15yard.jpg" /> */}
         </div>
         <p className="text-lg mt-8">For more information on our dumpsters, head to the <Link className="text-link underline" href="rent-a-dumpster">Rent a Dumpster</Link> page.</p>
       </section>

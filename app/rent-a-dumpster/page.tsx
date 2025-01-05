@@ -30,37 +30,37 @@ export default function page() {
     ]
   }
 
-  const fourteen: Dumpster = {
-    yards: "14",
-    price: "380",
-    image: {
-      path: "/images/14Yard.jpg",
-      alt: "14 yard dumpster"
-    },
-    desc: "Ideal for medium-sized projects like extensive home cleanouts, bathroom or kitchen renovations, and large landscaping jobs.",
-    list: [
-      "Medium-sized furniture (couches, dressers)",
-      "Small appliances",
-      "Construction debris (flooring, drywall, tiles)",
-      "Yard debris and light demolition waste"
-    ]
-  }
+  // const fourteen: Dumpster = {
+  //   yards: "14",
+  //   price: "380",
+  //   image: {
+  //     path: "/images/14Yard.jpg",
+  //     alt: "14 yard dumpster"
+  //   },
+  //   desc: "Ideal for medium-sized projects like extensive home cleanouts, bathroom or kitchen renovations, and large landscaping jobs.",
+  //   list: [
+  //     "Medium-sized furniture (couches, dressers)",
+  //     "Small appliances",
+  //     "Construction debris (flooring, drywall, tiles)",
+  //     "Yard debris and light demolition waste"
+  //   ]
+  // }
 
-  const fifteen: Dumpster = {
-    yards: "15",
-    price: "400",
-    image: {
-      path: "/images/15yard.jpg",
-      alt: "15 yard dumpster"
-    },
-    desc: "Popular choice for moderate-sized projects, including larger home cleanouts, small remodels, and yard overhauls.",
-    list: [
-      "Larger furniture (sofas, dining tables)",
-      "Appliances (dishwasher, washing machine)",
-      "Heavier construction materials (plaster, roofing material)",
-      "Bulkier yard waste and mixed debris"
-    ]
-  }
+  // const fifteen: Dumpster = {
+  //   yards: "15",
+  //   price: "400",
+  //   image: {
+  //     path: "/images/15yard.jpg",
+  //     alt: "15 yard dumpster"
+  //   },
+  //   desc: "Popular choice for moderate-sized projects, including larger home cleanouts, small remodels, and yard overhauls.",
+  //   list: [
+  //     "Larger furniture (sofas, dining tables)",
+  //     "Appliances (dishwasher, washing machine)",
+  //     "Heavier construction materials (plaster, roofing material)",
+  //     "Bulkier yard waste and mixed debris"
+  //   ]
+  // }
 
   return (
     <main>
@@ -70,8 +70,6 @@ export default function page() {
       <section className="flex flex-col items-center gap-4 md:gap-6 p-4 py-8">
         <h2 className="text-center font-header font-semibold text-5xl mb-4 md:text-6xl">Our Dumpsters</h2>
         <LargeCard dumpster={tenHalf} />
-        <LargeCard dumpster={fourteen} />
-        <LargeCard dumpster={fifteen} />
       </section>
     </main>
   )
