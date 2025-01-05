@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Card, Button, ContactForm } from "./components";
 
-// adding a comment cause vercel is retarded
+// vercel i've done this shit multiple times why are you so stupid
 
 export default function Home() {
   return (
