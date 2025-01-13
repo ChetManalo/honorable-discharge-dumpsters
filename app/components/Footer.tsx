@@ -60,9 +60,6 @@ export default function Footer() {
             </div>
         </div>
       </div>
-      <div className="w-full flex justify-center pt-8">
-        <p className="text-xs whitespace-nowrap">Copyright © 2024 Honorable Discharge Dumpsters, LLC.</p>
-      </div>
     </footer>
   )
 }
